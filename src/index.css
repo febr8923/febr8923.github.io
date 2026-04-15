@@ -1,0 +1,291 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text: #111111;
+  --text-secondary: #555555;
+  --bg: #ffffff;
+  --border: #e5e5e5;
+  --accent: #2563eb;
+  --font: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+/* Layout */
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Nav */
+nav {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+
+nav .nav-name:hover {
+  color: var(--accent);
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+nav .nav-links a {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+  color: var(--text);
+}
+
+/* Page */
+main {
+  padding: 64px 0 96px;
+}
+
+/* Home — hero */
+.hero {
+  margin-bottom: 56px;
+}
+
+.hero h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+
+.hero .subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* Section */
+section {
+  margin-bottom: 48px;
+}
+
+section h2 {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+/* Experience */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.experience-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.experience-meta strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.experience-meta span {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}
+
+/* Interests */
+.interests {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.interest-item {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+/* Links */
+.links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.link-item:hover {
+  color: var(--accent);
+}
+
+.link-item svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* CN page */
+.page-header {
+  margin-bottom: 48px;
+}
+
+.page-header h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.page-header p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.resource-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.resource-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.15s;
+}
+
+.resource-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.resource-item:hover {
+  opacity: 0.7;
+}
+
+.resource-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.resource-icon svg {
+  width: 16px;
+  height: 16px;
+  color: var(--text-secondary);
+}
+
+.resource-text strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 2px;
+}
+
+.resource-text span {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+}
+
+.note {
+  margin-top: 32px;
+  padding: 14px 16px;
+  border-left: 2px solid var(--border);
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+}
+
+footer p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 40px 0 64px;
+  }
+}
