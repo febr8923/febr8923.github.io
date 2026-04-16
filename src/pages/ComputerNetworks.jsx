@@ -5,7 +5,7 @@ export default function ComputerNetworks() {
         <div className="page-header">
           <h1>Computer Networks FS25</h1>
           <p>
-            Resources for the Computer Networks course at ETH Zurich (Spring Semester 2025).
+            Resources for the Computer Networks course at ETH Zurich (Spring Semester 2025, 2026).
             I'm a teaching assistant for this course.
           </p>
         </div>
